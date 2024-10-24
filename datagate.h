@@ -4,6 +4,7 @@
 #include <iostream>
 using namespace std;
 
+//Schnittstelle
 class DataGate
 {
 public:

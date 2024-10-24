@@ -5,9 +5,11 @@ CONFIG -= qt
 
 SOURCES += \
         datagate.cpp \
+        feuchtesensor.cpp \
         main.cpp \
         temperatursensor.cpp
 
 HEADERS += \
     datagate.h \
+    feuchtesensor.h \
     temperatursensor.h
