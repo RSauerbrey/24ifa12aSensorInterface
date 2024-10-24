@@ -5,6 +5,8 @@
 
 class TemperaturSensor : public DataGate
 {
+private:
+    double werte[5];
 public:
     TemperaturSensor();
     string getSensorType();

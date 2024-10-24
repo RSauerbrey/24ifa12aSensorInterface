@@ -6,17 +6,26 @@ using namespace std;
 
 int main()
 {
-    double humidity[10];
-    TemperaturSensor *t = new TemperaturSensor;
-    FeuchteSensor *f = new FeuchteSensor;
-    cout << t->getSensorType() << endl;
+    double helper[10];
+    DataGate *t = new TemperaturSensor;
+    DataGate *f = new FeuchteSensor;
+
     cout << f->getSensorType() << endl;
 
-    f->fetchData(humidity);
+    f->fetchData(helper);
+
     for(int i = 0 ; i < f->dataSize(); i++)
     {
-        cout << humidity[i] << endl;
+        cout << helper[i] << endl;
     }
 
+    cout << t->getSensorType() << endl;
+
+    t->fetchData(helper);
+
+    for(int i = 0 ; i < t->dataSize(); i++)
+    {
+        cout << helper[i] << endl;
+    }
     return 0;
 }

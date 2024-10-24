@@ -1,6 +1,11 @@
 #include "temperatursensor.h"
 
-TemperaturSensor::TemperaturSensor() {}
+TemperaturSensor::TemperaturSensor()
+{
+    srand(time(NULL));
+    for(int i = 0; i < 5; i++)
+        werte[i] = (-40 + rand() % 101) / 10.0;
+}
 
 string TemperaturSensor::getSensorType()
 {
@@ -8,11 +13,11 @@ string TemperaturSensor::getSensorType()
 }
 void TemperaturSensor::fetchData(double data[])
 {
-    //ToDo
+    for(int i = 0; i < 5 ; i++)
+        data[i] = werte[i];
 }
 
 int TemperaturSensor::dataSize()
 {
-    //ToDo
-    return -1;
+    return 5;
 }
